@@ -71,7 +71,6 @@ me.say_hi()
   <code><img title="JQuery" height="25" src="images/jquery-original.svg"></code>
   <code><img title="Java" height="25" src="images/java-original.svg"></code>
   <code><img title="JSON" height="25" src="images/json.svg"></code>
-  <code><img title="Unity" height="25" src="images/unity3d.svg"></code>
   <code><img title="Android" height="25" src="images/android.svg"></code>
   <code><img title="GitHub" height="25" src="images/github.svg"></code>
   <code><img title="MySQL" height="25" src="images/mysql.svg"></code>
