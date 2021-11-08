@@ -121,14 +121,13 @@ me.say_hi()
 <h2 align="center">👨‍💻 Repositories 👨‍💻</h2>
 <br>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/roninprogrammer/flightapp" title="JomFit"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=flightapp&theme=react&border_color=61dafb&border_radius=10"></a><a align="right" href="https://github.com/roninprogrmamer/
-editTextDilema" title="Edit Text Kotlin"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=
-editTextDilema&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="left" href="https://github.com/roninprogrammer/flightapp" title="Flight App"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=flightapp&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/roninprogrmamer/Foodie" title="Foodie"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=Foodie&theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br/><br/><br/><br/><br/><br/>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/roninprogrammer/uber_clone" title="Uber Clone"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=uber_clone&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/roninprogrammer/JomMakan" title="Jom Makan"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=JomMakan&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="left" href="https://github.com/roninprogrammer/flight_booking_application" title="AirAsia Booking"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=flight_booking_application&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/roninprogrammer/ewallet" title="eWallet"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=ewallet&theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br/><br/><br/><br/><br/><br/>
 <div width="100%" align="center">
