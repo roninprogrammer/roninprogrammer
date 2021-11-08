@@ -121,22 +121,22 @@ me.say_hi()
 <h2 align="center">👨‍💻 Repositories 👨‍💻</h2>
 <br>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/roninprogrammer/jomfit_app" title="JomFit"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=jomfit_app&theme=react&border_color=61dafb&border_radius=10"></a><a align="right" href="https://github.com/roninprogrmamer/car-sharing-app" title="React Native"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=react-basket-ball &theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="left" href="https://github.com/roninprogrammer/flightapp" title="JomFit"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=flightapp&theme=react&border_color=61dafb&border_radius=10"></a><a align="right" href="https://github.com/roninprogrmamer/
+editTextDilema" title="Edit Text Kotlin"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=
+editTextDilema&theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br/><br/><br/><br/><br/><br/>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/roninprogrammer/uber_clone" title="Uber Clone"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=Turkce-Heceleme-CPP&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/zumrudu-anka/CopyMoveForgeryDetectionWithDCT" title="Copy&Move Forgery Detection With DCT"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=zumrudu-anka&repo=CopyMoveForgeryDetectionWithDCT&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="left" href="https://github.com/roninprogrammer/uber_clone" title="Uber Clone"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=uber_clone&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/roninprogrammer/JomMakan" title="Jom Makan"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=JomMakan&theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br/><br/><br/><br/><br/><br/>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/zumrudu-anka/cpp-openmp-needleman-wunsch" title="Needleman Wunsch Algorithm With OpenMP"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=zumrudu-anka&repo=cpp-openmp-needleman-wunsch&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/zumrudu-anka/cpp-artificial-neural-networks" title="Artificial Neural Networks"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=zumrudu-anka&repo=cpp-artificial-neural-networks&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="left" href="https://github.com/roninprogrammer/uniquetrack" title="UniqueTrack"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=uniquetrack&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/roninprogrammer/chope" title="Chope Android"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=chope&theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br/><br/><br/><br/><br/><br/>
-<div width="100%" align="center">
-  <a align="left" href="https://github.com/zumrudu-anka/javascript-minesweeper" title="Minesweeper"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=zumrudu-anka&repo=javascript-minesweeper&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/zumrudu-anka/KTU-TraditionalComputerOlympics-2019" title="KTU Traditional Computer Olympics 2019-2020"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=zumrudu-anka&repo=KTU-TraditionalComputerOlympics-2019&theme=react&border_color=61dafb&border_radius=10"></a>
+<div width="100%" align="center"> <a align="left" href="https://github.com/roninprogrammer/jomfit_app" title="JomFit"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=jomfit_app&theme=react&border_color=61dafb&border_radius=10"></a><a align="right" href="https://github.com/roninprogrmamer/car-sharing-app" title="React Native"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=react-basket-ball &theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br><br><br><br><br><br>
 <h4 align="center">
