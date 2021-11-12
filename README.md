@@ -92,8 +92,8 @@ me.say_hi()
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=flightapp&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="flightapp" />
 </a>
 
-<a href="https://github.com/roninprogrammer">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=flightapp&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="flightapp" />
+<a href="https://github.com/roninprogrammer/Foodie">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=Foodie&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Foodie" />
 </a>
 
 <h2 align="center">⚡ Stats ⚡</h2>
