@@ -101,7 +101,7 @@ me.say_hi()
 <p align=center>
   <div align=center>
     <a href="https://github.com/roninprogrammer/github-readme-streak-stats" title="Go to Source">
-      <img align="left" width=390 src="https://github-readme-streak-stats.herokuapp.com/?user=roninprogrammer&theme=react&border=61dafb&hide_border=true" alt="zumrudu-anka" />
+      <img align="left" width=390 src="https://github-readme-streak-stats.herokuapp.com/?user=roninprogrammer&theme=react&border=61dafb&hide_border=true" alt="roninprogrammer" />
     </a>
     <a href="https://github.com/roninprogrammer/github-readme-stats" title="Go to Source">
       <img align="right" width=390 src="https://github-readme-stats.vercel.app/api?username=roninprogrammer&show_icons=true&theme=react&border_color=61dafb&hide_border=true" />
@@ -114,9 +114,7 @@ me.say_hi()
     </a>
   </div>
   <br>
-  <img src="https://activity-graph.herokuapp.com/graph?username=roninprogrammer&theme=react-dark&bg_color=20232a&hide_border=true" width="100%"/>
 </p>
-
 <hr>
 
 <h2 align="center">👨‍💻 Repositories 👨‍💻</h2>
@@ -129,14 +127,6 @@ me.say_hi()
 <div width="100%" align="center">
   <a align="left" href="https://github.com/roninprogrammer/flight_booking_application" title="AirAsia Booking"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=flight_booking_application&theme=react&border_color=61dafb&border_radius=10"></a>
   <a align="right" href="https://github.com/roninprogrammer/ewallet" title="eWallet"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=ewallet&theme=react&border_color=61dafb&border_radius=10"></a>
-</div>
-<br/><br/><br/><br/><br/><br/>
-<div width="100%" align="center">
-  <a align="left" href="https://github.com/roninprogrammer/uniquetrack" title="UniqueTrack"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=uniquetrack&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/roninprogrammer/chope" title="Chope Android"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=chope&theme=react&border_color=61dafb&border_radius=10"></a>
-</div>
-<br/><br/><br/><br/><br/><br/>
-<div width="100%" align="center"> <a align="left" href="https://github.com/roninprogrammer/jomfit_app" title="JomFit"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=jomfit_app&theme=react&border_color=61dafb&border_radius=10"></a><a align="right" href="https://github.com/roninprogrmamer/car-sharing-app" title="React Native"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=roninprogrammer&repo=react-basket-ball &theme=react&border_color=61dafb&border_radius=10"></a>
 </div>
 <br><br><br><br><br><br>
 <h4 align="center">
