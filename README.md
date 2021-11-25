@@ -142,3 +142,345 @@ me.say_hi()
 <h4 align="center">
   <a href="https://github.com/roninprogrammer?tab=repositories" title="Show Repositories">🔎 Show More 🔍</a>
 </h4>
+
+## This repo is to add best practices that developers can apply to write clean, short and testable code in android.
+
+## Table of Contents
+
+   * [Writing clean code](#writing-clean-code)
+      * [Nested Ifs](#nested-ifs)
+      * [Cognitive complexity](#cognitive-complexity)
+      * [Region](#region)
+      * [Naming](#naming)
+      * [Parameter Object pattern](#parameter-object-pattern)
+      * [No comments](#no-comments)
+      * [Use Abstract classes](#use-abstract-classes)
+   * [Must follow rules](#must-follow-rules)
+      * [Horizontal and vertical formatting rule](#horizontal-and-vertical-formatting-rule)
+      * [Boy Scout rule](#boy-scout-rule)
+      * [Keep it simple rule](#keep-it-simple-rule)
+      * [Consistency](#consistency)
+   * [Must have android tools](#must-have-android-tools)
+      * [SonarLint](#sonarlint)
+      * [FindBugs](#findbugs)
+      * [Codota](#codota)
+   * [Stupid mistakes by developers](#stupid-mistakes-by-developers)
+   * [Some good articles](#some-good-articles)
+   * [High performance layouts](#high-performance-layouts)   
+   * [The coding principles](#the-coding-principles)
+      * [SOLID](#solid)
+      * [DRY principle](#dry-principle)
+      * [The critics principle](#the-critics-principle)
+   * [Must have Android Libraries](#android-libraries)
+      * [Android Debug Database](#android-debug-database)
+      * [Robin](#robin)
+      * [Android studio plugins](#android-studio-plugins)
+   * [Quotes from authors](#quotes-from-authors)
+      * [uncle-bob](#uncle-bob)
+      * [kent](#kent)
+      
+ ##  Writing clean code
+ 
+ #### Nested If's
+ I hate this, I seriously do, you have statements which require multiple checks like this below code and it goes so deep really deep, In coding which is bad actually.
+ 
+ ```
+ if (vehicle != null) {
+        if (vehicle.getCar() != null) {
+            if (vehicle.getCar().getModel() != null) {
+                int price = vehicle.getCar().getModel().getPrice();
+            }
+ 
+        }
+    }
+ ```
+ 
+ And the thing is, It can be avoided, you totally can, like this. As you see below one is more readable and easy to understand.
+ ```
+ if (vehicle == null || vehicle.getCar() == null || vehicle.getCar().getModel() == null) return;
+  
+ 
+ 
+ int price = vehicle.getCar().getModel().getPrice();
+ 
+ ```
+ 
+ #### Cognitive complexity
+ **Definition**: It's a psychological characteristic or psychological variable that indicates how complex or simple is the frame and perceptual skill of a person.
+ 
+ In programming a method with nested if else's and larger size causes high cognitive complexity means less understandability. So better to split large methods into logically separated smaller ones and use above **Nested If's** trick to reduce it. Also SonarLint a static code analysis tool calculates this for you in realtime in android studio you can use sonar to see how you doing.
+ 
+ #### Region
+ 
+ Use regions to separate your code fragments in big classes like britisher's did with divide and rule policy, very effective ask indians.
+ ```
+ //region meaningful name of your logically separated region
+ do your work here.
+ //endregion
+ ```
+ 
+ #### Naming
+ Short names for short living variables and good and meaningful names for long living ones because they'll be with you for a long-long time. They are family.
+ ```
+ For e.g. index variable within for loop can be 'i' but as class variable should be 'index'
+ ```
+ 
+ #### [Parameter Object pattern](https://refactoring.guru/introduce-parameter-object)
+ There is no restriction to number of paramters passed in methods but it's a bad practice to pass more than 3 or 4, So if your methods contains a repeating group of parameters which are passed among several methods. We can avoid that by replacing these parameters with an object.
+ 
+  #### No comments
+ "Code never lies, comments sometimes do." - **Ron Jeffries**
+ * Always try to explain yourself in code because you're a coder not a commenter.
+ * Don't add obvious noise.
+ * Add comments for Public APIs.
+ * Use it where necessary as time passes by code will change comment wouldn't.
+ * You're being paid for coding not commenting.
+ 
+ #### Use Abstract classes
+ Create abstract classes to implement only those callbacks which you need. As `SimpleTabSelectedListener` below, No need to add onTabReselected, onTabUnselected if you don't need it.
+ 
+ ```
+public abstract class SimpleTabSelectedListener implements TabLayout.OnTabSelectedListener {
+
+    @Override
+    public void onTabReselected(TabLayout.Tab tab) {
+    }
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+    }
+}
+```
+ 
+ ## Must follow rules
+ 
+ #### Horizontal and vertical formatting rule
+ It's not a constraint but a formatting rule that should be followed to keep your code vertically and horizontally small so with just one glance you can read it all.
+
+ 
+ #### Boy Scout rule
+ **Definition**: Leave the campground cleaner than you found it
+ 
+ #### Consistency
+ If you do something in one way then do it the same way everywhere- **Uncle Bob**
+ 
+ #### Keep it simple rule
+ Keep it simple stupid. Simpler is always better. Reduce complexity as much as possible - **Uncle Bob**
+ 
+ 
+ ## Must have Android tools
+ 
+ #### SonarLint
+ I recommend this, i have been using it and i got to know about this from a colleague, sometimes they can be helpful, kidding. It has several features best one to just scan the modified classes and it'll automatically criticise you for your bad code and how ugly you can be sometimes. BTW **Cognitive complexity** we talked earlier it helps.
+ 
+ #### FindBugs
+ It's a program that uses static code analysis to find bugs in java code just like SonarLint. To know more about FindBug check this. Flip a coin or whatever but pick one of these tools.
+ 
+ #### [Codota](https://www.codota.com/)
+ It's a great tool to help you with code segments that you might otherwise have to search on github and stackoverflow and it's totally available in your android studio.
+ 
+ ## Stupid mistakes by Developers
+ 
+ #### Not using parcelable
+ If you're not using it then you're making a mistake. 
+ 
+ * Parcelable is designed for android.
+ * Parcelable is faster than serializable interface
+ * Parcelable interface takes more time for implemetation compared to serializable interface but there are plugins to automate it.
+ * Serializable interface is easier to implement
+ * Serializable interface create a lot of temporary objects and cause quite a bit of garbage collection
+ * Parcelable array can be pass via Intent in android
+ 
+ #### Directly accessing variables
+ If you're accessing another class variables using dot operator it'll become ugly with time. There is a reason why we have access modifiers keep your variables private and se getters to access those variables.
+ 
+ This'll reduce code coupling. People who code in activity and fragments might know what i'm talking about.
+ 
+ #### Creating too many class variables
+ If you still remember class as in OOPs concept class represents an entity a noun. A class has attributes which define it's states and methods it's behavior.
+ 
+ I have a totally different understanding from my experience I believe attributes are the real deal and methods they just work on it. So try to keep attributes which are relevant to class and trim those extra global variables(mostly booleans) you added for whatever reason.
+ 
+ Parameter object pattern can be of some help her.
+ 
+ 
+ #### Integer.valueOf
+ Integer.valueOf returns `Integer` object whereas Integer.parseInt returns primitive `int`. Avoid using Objects for primitive types they're not meant for it.
+ 
+ #### Looping to add elements to arraylist
+ People there is addAll method in ArrayList use it for adding another list.
+ 
+ #### [Avoid overdraw](https://developer.android.com/topic/performance/rendering/overdraw)
+ In nested layouts we usually set `backgroundColor` property to ViewGroups without realising that it'll result in overdraw. This reduces your layouts performance. In Developer Options setting you can enable Overdraw to pinpoint your bad layouts.
+  
+ 
+ ## Some good articles
+ 
+ - [Right way to implement Splash screen](https://www.bignerdranch.com/blog/splash-screens-the-right-way/)
+ - [Debugging Android Database and SharedPreferences](https://medium.com/mindorks/debugging-android-databases-and-shared-preferences-in-the-easiest-way-e5f705dfc06b)
+ - [How to become more productive in android with android studio plugins](https://medium.com/mindorks/how-to-become-more-productive-in-android-with-android-studio-plugins-3beb3861fa7)
+ - [Who lives and who dies](https://medium.com/google-developers/who-lives-and-who-dies-process-priorities-on-android-cb151f39044f)
+ - [VectorDrawable Adaptive Icons](https://medium.com/@ianhlake/vectordrawable-adaptive-icons-3fed3d3205b5)
+ - [How to be a Mock-star](https://medium.com/fueled-engineering/how-to-be-a-mock-star-fc00714d8c2f)
+ - [Why i studied full time for a google interview](https://medium.freecodecamp.org/why-i-studied-full-time-for-8-months-for-a-google-interview-cc662ce9bb13)
+ - [Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion](https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd)
+ - [Supercharging the Android WebView](https://medium.com/myntra-engineering/leveraging-native-power-in-webview-105d248fe71)
+ 
+ 
+ ## High performance layouts
+ 
+ #### [Anko Layouts](https://github.com/Kotlin/anko/wiki/Anko-Layouts)
+ - XML layouts are somewhat slow and aren't typesafe or nullsafe
+ - Whereas Anko Layouts are [400% faster](https://android.jlelse.eu/400-faster-layouts-with-anko-da17f32c45dd) than XML layouts.
+ 
+ 
+ #### [Proteus](https://github.com/flipkart-incubator/proteus)
+ Uses json for layout creation ans as you'll know json parsing is faster than xml it improves layout performance.
+ 
+ ## The coding principles
+ 
+ #### SOLID
+ It's a mnemonic acronym that helps define the five basic object-oriented design principles:
+ - Single Responsibility Principle
+ - Open-Closed Principle
+ - Liskov Substitution Principle
+ - Interface Segregation Principle
+ - Dependency Inversion Principle
+ 
+ 
+ #### DRY principle
+ Never ever write same piece of code twice make it your ironclad rule and strictly prohibit this in your kingdom.
+ 
+ #### The Critics principle
+ Okay it's totally made up but it's very logical. When you're reviewing code of your teammates don't be a friend, Be their arch enemy, don't let them make mistakes that you might have to clean someday. Cleaning other's shit will make your hand dirty. Enforce good practices in code reviews.
+ 
+ ## Must have Android Libraries
+ 
+ #### [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)
+ 
+ Android Debug Database allows you to view databases and shared preferences directly in your browser in a very simple way.
+ 
+  #### What can Android Debug Database do?
+ * See all the databases.
+ * See all the data in the shared preferences used in your application.
+ * Run any sql query on the given database to update and delete your data.
+ * Directly edit the database values.
+ * Directly edit the shared preferences.
+ * Directly add a row in the database.
+ * Directly add a key-value in the shared preferences.
+ * Delete database rows and shared preferences.
+ * Search in your data.
+ * Sort data.
+ * Download database.
+ * Debug Room inMemory database.
+
+ #### Android studio plugins
+ 
+ This is a list of all awesome and useful android studio plugins.
+### Latest Plugins
+
+|          Plugin Name                        |                 Plugin link
+| ------------------------------------------  |  -----------------------------------------------------------
+| **Flutter installation**                    |  https://github.com/flutter/flutter-intellij
+| **SonarLint inspection tool**               |  https://plugins.jetbrains.com/plugin/7973-sonarlint
+| **Kotlin installation**                     |  http://kotlinlang.org/
+
+### Plugins for kotlin 
+
+|          Plugin Name                        |                 Plugin link
+| ------------------------------------------  |  -----------------------------------------------------------
+| **Json to kotlin class**                    |  https://github.com/wuseal
+| **Kotlin Parcelable code generator**        |  https://github.com/nekocode/android-parcelable-intellij-plugin-kotlin
+| **Java Stream API debugger**                |  https://plugins.jetbrains.com/plugin/9696-java-stream-debugger
+
+
+
+### Code generators
+
+|          Plugin Name                        |                 Plugin link
+| ------------------------------------------  |  -----------------------------------------------------------
+| MVP code generator                          |  https://plugins.jetbrains.com/plugin/9784-generate-m-v-p-code
+| Parcelable code generators                  |  https://github.com/mcharmas/android-parcelable-intellij-plugin
+| Butterknife code injector                   |  https://github.com/avast/android-butterknife-zelezny
+| JsonToKotlinClass                           |  https://github.com/wuseal/JsonToKotlinClass
+| Json to Pojo generator                      |  https://github.com/nvinayshetty/DTOnator
+| StepBuilder Generator                       |  https://plugins.jetbrains.com/plugin/8276-stepbuilder-generator
+| Remove butterknife                          |  https://github.com/u3shadow/RemoveButterKnife
+| Android DPI calculator                      |  https://plugins.jetbrains.com/plugin/7832-android-dpi-calculator
+| Databinding Support                         |  https://plugins.jetbrains.com/plugin/9271-databinding-support
+| Android Selector chapek                     |  https://github.com/inmite/android-selector-chapek
+| Android Holo Colors IntelliJ Plugin         |  https://github.com/jeromevdl/android-holo-colors-idea-plugin
+| ExyNap                                      |  http://exynap.com/
+| EventBus                                    |  https://github.com/kgmyshin/eventbus-intellij-plugin
+| FindViewByMe                                |  https://github.com/laobie/FindViewByMe
+| AndroidLocalizationer                       |  https://github.com/westlinkin/AndroidLocalizationer
+| .gitignore                                  |  https://github.com/hsz/idea-gitignore
+| BIU (plugin to compress your PNGs)          |  https://plugins.jetbrains.com/plugin/9788-biu                           
+
+### UI Design
+
+|          Plugin Name                        |                 Plugin link
+| ------------------------------------------  |  -----------------------------------------------------------
+| Sexy Editor                                 |  https://plugins.jetbrains.com/plugin/1833-sexy-editor
+| SmoothScroll                                |  https://plugins.jetbrains.com/plugin/7355-smoothscroll
+| Android Material Design Icon Generator      |  https://plugins.jetbrains.com/plugin/7647-android-material-design-icon-generator
+| Key Promoter X                              |  https://github.com/halirutan/IntelliJ-Key-Promoter/tree/KeyPromoterX
+| Here-be-Dragons                             |  https://github.com/anupcowkur/here-be-dragons
+| Prettify                                    |  https://github.com/Haehnchen/idea-android-studio-plugin
+| JSONOnlineViewer                            |  https://plugins.jetbrains.com/plugin/7838-jsononlineviewer
+| Android Methods Count                       |  https://plugins.jetbrains.com/plugin/8076-android-methods-count
+| Codota                                      |  https://plugins.jetbrains.com/plugin/7638-codota
+| IdeaVim                                     |  https://plugins.jetbrains.com/plugin/164-ideavim
+| Material Theme UI for Jetbrains             |  https://github.com/ChrisRM/material-theme-jetbrains
+| CodeGlance                                  |  https://github.com/Vektah/CodeGlance
+| Material Theme UI EAP                       |  https://plugins.jetbrains.com/plugin/9377-material-theme-ui-eap
+| SVG2VectorDrawable                          |  https://github.com/misakuo/svgtoandroid
+| Android Drawable Importer                   |  https://github.com/winterDroid/android-drawable-importer-intellij-plugin
+| Vector Drawable Thumbnails                  |  https://plugins.jetbrains.com/plugin/10741-vector-drawable-thumbnails
+| ChroMATERIAL                                |  https://github.com/ciscorucinski/ChroMATERIAL
+
+
+### Debugging
+
+|          Plugin Name                        |                 Plugin link
+| ------------------------------------------  |  -----------------------------------------------------------
+| JVM Debugger Memory View                    |  https://plugins.jetbrains.com/plugin/8537-jvm-debugger-memory-view
+| Android-Resource-Usage-Count                |  https://github.com/niorgai/Android-Resource-Usage-Count
+| FindBugs                                    |  https://plugins.jetbrains.com/plugin/3847-findbugs-idea
+| Jetbrains-Wakatime                          |  https://github.com/wakatime/jetbrains-wakatime
+| Android Wifi Plugin                         |  https://github.com/pedrovgs/AndroidWiFiADB
+| QA Plug                                     |  https://plugins.jetbrains.com/plugin/4594-qaplug
+
+
+### Utilities
+
+|          Plugin Name                        |                 Plugin link
+| ------------------------------------------  |  -----------------------------------------------------------
+| JRebel for android                          |  https://plugins.jetbrains.com/plugin/7936-jrebel-for-android
+| Advanced java folding                       |  https://plugins.jetbrains.com/plugin/9320-advanced-java-folding
+| CPU Usage Indicator                         |  https://plugins.jetbrains.com/plugin/8580-cpu-usage-indicator
+| Android folding plugin                      |  https://github.com/dmytrodanylyk/folding-plugin
+| ADB idea                                    |  https://github.com/pbreault/adb-idea
+| Permission Dispatcher                       |  https://github.com/shiraji/permissions-dispatcher-plugin
+| Scala                                       |  https://plugins.jetbrains.com/plugin/1347-scala
+| ADB Wifi                                    |  https://github.com/layerlre/ADBWIFI
+| String Manipulation                         |  https://github.com/krasa/StringManipulation
+| Android localization                        |  https://github.com/Airsaid/AndroidLocalizePlugin
+| Inspire to write code                       |  https://github.com/Airsaid/InspireWritingPlugin
+
+### Tools
+
+|          Plugin Name                        |                 Plugin link
+| ------------------------------------------  |  -----------------------------------------------------------
+| GenyMotion                                  |  https://www.genymotion.com/plugins/
+| Git Flow Integration for Intellij           |  https://github.com/OpherV/gitflow4idea/
+| SonarLint                                   |  https://plugins.jetbrains.com/plugin/7973-sonarlint
+| Spotless                                    |  https://github.com/diffplug/spotless
+
+### Contributing to this Repo
+If you feel something is missing. Create a pull request and Dive In.
+
+### Check out another awesome library to capture your crashes instantly and locally.
+[CrashReporter](https://github.com/MindorksOpenSource/CrashReporter) on your duty.
+
+### [Chinese version : 中文版访问这里](https://github.com/sunzq19931016/Android-Studio-Plugins-cn)
