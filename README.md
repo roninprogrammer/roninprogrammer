@@ -143,7 +143,7 @@ me.say_hi()
   <a href="https://github.com/roninprogrammer?tab=repositories" title="Show Repositories">🔎 Show More 🔍</a>
 </h4>
 
-## This repo is to add best practices that developers can apply to write clean, short and testable code in android.
+##Best practices that developers can apply to write clean, short and testable code in android.
 
 ## Table of Contents
 
